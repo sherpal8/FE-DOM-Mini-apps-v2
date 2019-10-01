@@ -15,9 +15,9 @@ const addTodo = event => {
 form.addEventListener("submit", addTodo);
 
 const onClick = event => {
-  item.classList.add("crossOut");
+  event.target.classList.toggle("crossOut");
 };
-
-listItems.forEach(item => {
-  item.addEventListener("click", onClick);
-});
+list.addEventListener("click", onClick);
+// listItems.forEach(item => {
+//   item.addEventListener("click", onClick);
+// });
